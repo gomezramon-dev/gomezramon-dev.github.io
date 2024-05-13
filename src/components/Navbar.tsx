@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
@@ -16,6 +16,7 @@ const Navbar = () => {
           onClick={() => {
             setActive("");
             window.scrollTo(0,0);
+            console.log(active);
           }}
         >
           <img src={Logo} alt="logo" className="h-10 object-contain"/>
