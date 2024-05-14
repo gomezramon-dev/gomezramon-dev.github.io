@@ -1,21 +1,25 @@
-export const navLinks = [
-  {
-    id: "aboutme",
-    title: "about-me",
-  },
-  {
-    id: "skills",
-    title: "skills",
-  },
-  {
-    id: "projects",
-    title: "projects",
-  },
-  {
-    id: "contactme",
-    title: "contact-me",
-  },
-];
+export const navLinks = {
+  leftSide : [
+    {
+      id: "aboutme",
+      title: "about-me",
+    },
+    {
+      id: "skills",
+      title: "skills",
+    },
+  ], 
+  rightSide : [
+    {
+      id: "projects",
+      title: "projects",
+    },
+    {
+      id: "contactme",
+      title: "contact-me",
+    },
+  ]
+}
 
 const services = [
   {
