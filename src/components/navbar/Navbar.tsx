@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full h-20 z-20 ${horizontalPadding} ${firstRender.current ? 'flex' : 'hidden'} bg-secondary ${animationOnDesktop}`}
+        className={`fixed w-full h-20 z-20 ${horizontalPadding} flex bg-secondary ${animationOnDesktop}`}
       >
         <div className={`w-full flex items-center justify-between`}>
           <NavbarLinks linksData={navLinksData.leftSide} />
@@ -40,7 +40,7 @@ const Navbar = () => {
           <NavbarLinks linksData={navLinksData.rightSide} />
         </div>
       </nav>
-      <nav className={`fixed w-full h-20 z-10 ${horizontalPadding} ${firstRender.current ? 'flex' : 'hidden'} ${animationOnMobile}`}>
+      <nav className={`fixed w-full h-20 z-10 ${horizontalPadding} flex ${animationOnMobile}`}>
         <div className={`w-full flex items-center justify-between`}>
           <Link
             to="/"
