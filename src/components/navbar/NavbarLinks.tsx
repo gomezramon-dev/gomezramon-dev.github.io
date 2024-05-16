@@ -1,5 +1,5 @@
-import { navbarResponsiveStyle } from "../../utils/responsiveStyles";
-import useNavbarStore from "../../utils/store";
+import { navbarResponsiveStyle } from "../../utils/styles";
+import { useLinkStore } from "../../utils/store";
 
 interface Props {
   linksData: {
@@ -10,7 +10,7 @@ interface Props {
 
 const NavbarLinks = ({ linksData }: Props) => {
   const { itemsFlex } = navbarResponsiveStyle;
-  const { activeLink, setActiveLink } = useNavbarStore();
+  const { activeLink, setActiveLink } = useLinkStore();
 
   return (
     <ul className={`${itemsFlex} list-none`}>

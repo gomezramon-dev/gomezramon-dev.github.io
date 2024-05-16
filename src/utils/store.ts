@@ -1,17 +1,42 @@
 import { create } from "zustand";
+import {
+  menuClosed,
+  menuClosedHover,
+  menuClosedPressed,
+  menuOpen,
+  menuOpenHover,
+  menuOpenPressed,
+} from "../assets/";
 
-type useNavbarType = {
+type useLinkType = {
   activeLink: string;
-  toggleMenu: boolean;
   setActiveLink: (value: string) => void;
+}
+
+type useMenuType = {
+  toggleMenu: boolean;
+  menuImg: string;
+  menuHoverImg: string;
+  menuPressedImg: string;
   setToggleMenu: (value: boolean) => void;
 };
 
-const useNavbarStore = create<useNavbarType>(set => ({
+export const useLinkStore = create<useLinkType>((set) => ({
   activeLink: "",
-  toggleMenu: false,
-  setActiveLink: (value) => set({ activeLink: value}),
-  setToggleMenu: (value) => set({ toggleMenu: value})
+  setActiveLink: (value) => set({ activeLink: value }),
 }));
 
-export default useNavbarStore;
+export const useMenuStore = create<useMenuType>((set) => ({
+  toggleMenu: false,
+  menuImg: menuClosed,
+  menuHoverImg: menuClosedHover,
+  menuPressedImg: menuClosedPressed,
+  setToggleMenu: (value) => {
+    set({
+      toggleMenu: value,
+      menuImg: value ? menuOpen : menuClosed,
+      menuHoverImg: value ? menuOpenHover : menuClosedHover,
+      menuPressedImg: value ? menuOpenPressed : menuClosedPressed,
+    });
+  },
+}));

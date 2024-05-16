@@ -17,7 +17,8 @@ const config: Config = {
         card: "0px 35px 120px -15px #211e35",
       },
       screens: {
-        desktop: {'max': '1279px'},
+        desktop: {'min': '1280px', 'max': '1290px'},
+        mobile: {'min': '1270px', 'max': '1279px'},
       },
       keyframes: {
         slideDown: {
