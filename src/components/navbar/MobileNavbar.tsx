@@ -11,6 +11,10 @@ const MobileNavbar = () => {
   const { setActiveLink } = useLinkStore();
   const { toggleMenu, menuImg, menuHoverImg, menuPressedImg, setToggleMenu } = useMenuStore();
   const imageRef = useRef<HTMLImageElement | null>(null);
+  const setImageSrc = (src: string) => {
+    (imageRef.current as HTMLImageElement).src = src;
+  };
+  
 
   return (
     <nav className={`fixed w-full h-20 z-10 flex ${horizontalPadding} ${animationOnMobile}`}>
@@ -28,18 +32,10 @@ const MobileNavbar = () => {
       
         <div className="flex flex-1 justify-end items-center">
           <img
-            onMouseOver={() => {
-              (imageRef.current as HTMLImageElement).src = menuHoverImg;
-            }}
-            onMouseOut={() => {
-              (imageRef.current as HTMLImageElement).src = menuImg;
-            }}
-            onMouseDown={() => {
-              (imageRef.current as HTMLImageElement).src = menuPressedImg;
-            }}
-            onMouseUp={() => {
-              (imageRef.current as HTMLImageElement).src = menuImg;
-            }}
+            onMouseOver={() => setImageSrc(menuHoverImg)}
+            onMouseOut={() => setImageSrc(menuImg)}
+            onMouseDown={() => setImageSrc(menuPressedImg)}
+            onMouseUp={() => setImageSrc(menuImg)}
             src={menuImg}
             alt="menu"
             ref={imageRef}
@@ -48,8 +44,7 @@ const MobileNavbar = () => {
               setToggleMenu(!toggleMenu);
             }}
           />
-          <div className={`${!toggleMenu ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}></div>
-        </div>
+        </div>      
       </div>
     </nav>
   );

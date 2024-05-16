@@ -5,6 +5,7 @@ const config: Config = {
   mode: "jit",
   theme: {
     extend: {
+      boxSizing: ['border-box'],
       colors: {
         primary: "#FDBD02",
         secondary: "#241F23",
@@ -37,6 +38,9 @@ const config: Config = {
     },
   },
   plugins: [],
+  corePlugins: {
+    boxSizing: true,
+  },
 }
 
 export default config
