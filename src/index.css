@@ -6,7 +6,14 @@
   font-family: 'Monaspace Neon';
   font-style: normal;
   font-weight: 700;
-  src: local("Monaspace Neon"), url("/assets/fonts/MonaspaceNeon-bold.woff2") format("woff2");
+  src: local("Monaspace Neon"), url("/assets/fonts/MonaspaceNeon-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Monaspace Neon';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Monaspace Neon"), url("/assets/fonts/MonaspaceNeon-ExtraBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,8 +28,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Monaspace Neon", sans-serif;
+  font-weight: 700;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+.letter-spacing {
+  letter-spacing: 4px;
 }
 
 .hash-span {

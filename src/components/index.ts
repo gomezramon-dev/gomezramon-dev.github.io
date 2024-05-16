@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import Navbar from './navbar/Navbar';
 import Header from './Header';
 import AboutMe from './AboutMe';
 import Skills from './Skills';

@@ -17,7 +17,21 @@ const config: Config = {
         card: "0px 35px 120px -15px #211e35",
       },
       screens: {
-        xs: "450px",
+        desktop: {'max': '1279px'},
+      },
+      keyframes: {
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)', visibility: 'visible' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)', visibility: 'hidden'},
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 0.5s ease forwards',
+        slideUp: 'slideUp 0.5s ease forwards',
       },
     },
   },

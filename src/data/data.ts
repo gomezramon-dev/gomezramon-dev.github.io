@@ -1,4 +1,4 @@
-export const navLinks = {
+export const navLinksData = {
   leftSide : [
     {
       id: "aboutme",

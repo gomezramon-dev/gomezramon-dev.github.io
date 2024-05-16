@@ -1,5 +1,9 @@
-import Logo from './svg/logo.svg';
+import logo from './svg/logo.svg';
+import menuClosed from './svg/menuClosed.svg';
+import menuOpen from './svg/menuOpen.svg';
 
 export {
-  Logo,
+  logo,
+  menuClosed,
+  menuOpen,
 }
