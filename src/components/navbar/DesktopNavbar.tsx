@@ -6,21 +6,24 @@ import { navbarResponsiveStyle } from "../../utils/styles";
 import { useLinkStore } from "../../utils/store";
 
 const DesktopNavbar = () => {
-  const { horizontalPadding, imageHeight, animationOnDesktop } = navbarResponsiveStyle;
+  const { horizontalPadding, imageHeight, animationOnDesktop } =
+    navbarResponsiveStyle;
   const { setActiveLink } = useLinkStore();
 
   return (
-    <nav className={`fixed w-full h-20 z-20 flex bg-secondary ${horizontalPadding} ${animationOnDesktop}`}>
-      <div className={`w-full flex items-center justify-between`}>
-        <NavbarLinks 
-          linksData={navLinksData.leftSide} 
+    <nav
+      className={`bg-secondary fixed z-20 flex h-20 w-full ${horizontalPadding} ${animationOnDesktop}`}
+    >
+      <div className={`flex w-full items-center justify-between`}>
+        <NavbarLinks
+          linksData={navLinksData.leftSide}
           colorText={"text-white"}
           flexDirection="flex-row"
           textSize="text-base"
         />
         <Link
           to="/"
-          className="pl-2.5 flex items-center"
+          className="flex items-center pl-2.5"
           onClick={() => {
             setActiveLink("");
             window.scrollTo(0, 0);
@@ -28,8 +31,8 @@ const DesktopNavbar = () => {
         >
           <img src={logo} alt="logo" className={`${imageHeight}`} />
         </Link>
-        <NavbarLinks 
-          linksData={navLinksData.rightSide} 
+        <NavbarLinks
+          linksData={navLinksData.rightSide}
           colorText="text-white"
           flexDirection="flex-row"
           textSize="text-base"

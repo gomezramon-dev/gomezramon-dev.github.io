@@ -11,7 +11,7 @@ import {
 type useLinkType = {
   activeLink: string;
   setActiveLink: (value: string) => void;
-}
+};
 
 type useMenuType = {
   toggleMenu: boolean;

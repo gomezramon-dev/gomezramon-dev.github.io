@@ -1,5 +1,5 @@
 export const navLinksData = {
-  leftSide : [
+  leftSide: [
     {
       id: "aboutme",
       title: "about-me",
@@ -8,8 +8,8 @@ export const navLinksData = {
       id: "skills",
       title: "skills",
     },
-  ], 
-  rightSide : [
+  ],
+  rightSide: [
     {
       id: "projects",
       title: "projects",
@@ -18,8 +18,8 @@ export const navLinksData = {
       id: "contactme",
       title: "contact-me",
     },
-  ]
-}
+  ],
+};
 
 const services = [
   {

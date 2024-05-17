@@ -1,14 +1,14 @@
-import DesktopNavbar from './navbar/DesktopNavbar';
-import MobileNavbar from './navbar/MobileNavbar';
-import NavbarLinks from './navbar/NavbarLinks';
-import Header from './Header';
-import AboutMe from './AboutMe';
-import Skills from './Skills';
-import Projects from './Projects';
-import ContactMe from './ContactMe';
+import DesktopNavbar from "./navbar/DesktopNavbar";
+import MobileNavbar from "./navbar/MobileNavbar";
+import NavbarLinks from "./navbar/NavbarLinks";
+import Header from "./Header";
+import AboutMe from "./AboutMe";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import ContactMe from "./ContactMe";
 
 export {
-  DesktopNavbar, 
+  DesktopNavbar,
   MobileNavbar,
   NavbarLinks,
   Header,
@@ -16,4 +16,4 @@ export {
   Skills,
   Projects,
   ContactMe,
-}
+};
