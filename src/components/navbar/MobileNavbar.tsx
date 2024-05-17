@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 import NavbarLinks from "./NavbarLinks";
 import { navLinksData } from "../../data/data";
-import { navbarResponsiveStyle, menuResponsiveStyle } from "../../utils/styles";
+import { navbarResponsiveStyle } from "../../utils/styles";
 import { useLinkStore, useMenuStore } from "../../utils/store";
 
 const MobileNavbar = () => {
-  const { horizontalPadding, animationOnMobile, animationOnMobileWindow } =
-    navbarResponsiveStyle;
-  const { horizontalWhiteBarSize, horizontalBlackBarSize } =
-    menuResponsiveStyle;
+  const { animationOnMobile, animationOnMobileWindow } = navbarResponsiveStyle;
   const { setActiveLink } = useLinkStore();
   const { toggleMenu, menuImg, menuHoverImg, menuPressedImg, setToggleMenu } =
     useMenuStore();
@@ -20,9 +17,9 @@ const MobileNavbar = () => {
   };
 
   return (
-    <>
-      <nav
-        className={`fixed z-10 flex h-20 w-full ${horizontalPadding} ${animationOnMobile}`}
+    <nav>
+      <div
+        className={`horizontal-padding fixed z-10 flex h-20 w-full ${animationOnMobile}`}
       >
         <div className={`flex w-full items-center justify-between`}>
           <Link
@@ -52,29 +49,31 @@ const MobileNavbar = () => {
             />
           </div>
         </div>
-      </nav>
+      </div>
       <div
-        className={`${toggleMenu ? "flex" : "hidden"} fixed flex h-full w-full flex-col items-center justify-center ${animationOnMobileWindow}`}
+        className={`${toggleMenu ? "grid" : "hidden"} fixed h-full w-full grid-cols-8 flex-col items-center justify-center ${animationOnMobileWindow}`}
       >
-        <div
-          className={`bg-secondary flex items-center justify-start gap-2 ${horizontalBlackBarSize} h-[30px] pl-4`}
-        >
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
-        </div>
-        <div
-          className={`flex flex-col items-center justify-between bg-white ${horizontalWhiteBarSize} border-secondary border-x-[6px] border-b-[6px] py-48 text-center`}
-        >
-          <NavbarLinks
-            linksData={[...navLinksData.leftSide, ...navLinksData.rightSide]}
-            colorText="text-black"
-            flexDirection="flex-col"
-            textSize="text-2xl"
-          />
+        <div className="col-span-6 col-start-2 flex flex-col ">
+          <div
+            className={`bg-secondary flex h-[30px] items-center justify-start gap-2 pl-4`}
+          >
+            <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
+            <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
+            <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
+          </div>
+          <div
+            className={`border-secondary flex flex-col items-center justify-between border-x-[6px] border-b-[6px] bg-white py-48 text-center`}
+          >
+            <NavbarLinks
+              linksData={[...navLinksData.leftSide, ...navLinksData.rightSide]}
+              colorText="text-black"
+              flexDirection="flex-col"
+              textSize="text-2xl"
+            />
+          </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

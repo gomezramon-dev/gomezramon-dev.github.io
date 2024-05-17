@@ -40,3 +40,25 @@
     color-scheme: dark;
   }
 }
+
+.horizontal-padding {
+  @apply px-12;
+}
+
+@media (min-width: 640px) {
+  .horizontal-padding {
+    @apply px-20;
+  }
+}
+
+@media (min-width: 1280px) {
+  .horizontal-padding {
+    @apply px-32;
+  }
+}
+
+@media (min-width: 1536px) {
+  .horizontal-padding {
+    @apply px-56;
+  }
+}

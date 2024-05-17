@@ -1,4 +1,3 @@
-import { navbarResponsiveStyle } from "../../utils/styles";
 import { useLinkStore } from "../../utils/store";
 
 interface Props {
@@ -17,11 +16,12 @@ const NavbarLinks = ({
   flexDirection,
   textSize,
 }: Props) => {
-  const { itemsGap } = navbarResponsiveStyle;
   const { activeLink, setActiveLink } = useLinkStore();
 
   return (
-    <ul className={`flex list-none ${itemsGap} ${flexDirection}`}>
+    <ul
+      className={`flex list-none gap-10 xl:gap-12 2xl:gap-16 ${flexDirection}`}
+    >
       {linksData.map((link) => (
         <li
           key={link.id}

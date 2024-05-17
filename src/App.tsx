@@ -9,7 +9,7 @@ import {
   ContactMe,
 } from "./components/";
 
-// TODO: Consider Refactoring animations to only handle it when mobile/desktop viewport changes (maybe applying a mediator pattern design)
+// TODO: Consider refactorize animations to only handle it when mobile/desktop viewport or menu changes (maybe applying a mediator pattern design). Dont use props in styling. SetImage logic inside into the store.
 
 const App = () => {
   return (
