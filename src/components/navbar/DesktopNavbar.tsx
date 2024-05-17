@@ -12,7 +12,12 @@ const DesktopNavbar = () => {
   return (
     <nav className={`fixed w-full h-20 z-20 flex bg-secondary ${horizontalPadding} ${animationOnDesktop}`}>
       <div className={`w-full flex items-center justify-between`}>
-        <NavbarLinks linksData={navLinksData.leftSide} />
+        <NavbarLinks 
+          linksData={navLinksData.leftSide} 
+          colorText={"text-white"}
+          flexDirection="flex-row"
+          textSize="text-base"
+        />
         <Link
           to="/"
           className="pl-2.5 flex items-center"
@@ -23,7 +28,12 @@ const DesktopNavbar = () => {
         >
           <img src={logo} alt="logo" className={`${imageHeight}`} />
         </Link>
-        <NavbarLinks linksData={navLinksData.rightSide} />
+        <NavbarLinks 
+          linksData={navLinksData.rightSide} 
+          colorText="text-white"
+          flexDirection="flex-row"
+          textSize="text-base"
+        />
       </div>
     </nav>
   );

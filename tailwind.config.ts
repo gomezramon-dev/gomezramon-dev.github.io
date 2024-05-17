@@ -34,6 +34,7 @@ const config: Config = {
       animation: {
         slideDown: 'slideDown 0.5s ease forwards',
         slideUp: 'slideUp 0.5s ease forwards',
+        slideUpWindow: 'slideUp 1s ease forwards',
       },
     },
   },
