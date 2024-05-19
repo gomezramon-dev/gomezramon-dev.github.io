@@ -1,34 +1,37 @@
 import { Link } from "react-router-dom";
-import { logo } from "../../assets";
+import classNames from "classnames";
 import NavbarLinks from "./NavbarLinks";
+import { logo } from "../../assets";
 import { navLinksData } from "../../data/data";
-import { navbarResponsiveStyle } from "../../utils/styles";
-import { useLinkStore } from "../../utils/store";
+import { useClickLogo, useResponsiveDesign } from "../../hooks";
 
 const DesktopNavbar = () => {
-  const { animationOnDesktop } = navbarResponsiveStyle;
-  const { setActiveLink } = useLinkStore();
+  const { handleClickOnLogo } = useClickLogo();
+  const { isLaunchedRWD, width, LARGE_MIN_WIDTH } = useResponsiveDesign();
 
   return (
     <nav
-      className={`bg-secondary horizontal-padding fixed z-20 flex h-20 w-full ${animationOnDesktop}`}
+      className={classNames(
+        "bg-secondary horizontal-padding fixed z-20 flex h-20 w-full",
+        {
+          "hidden": width < LARGE_MIN_WIDTH && !isLaunchedRWD,
+          "animate-slideUp lg:animate-slideDown": isLaunchedRWD,
+        },
+      )}
     >
-      <div className={`flex w-full items-center justify-between`}>
+      <div className="flex w-full items-center justify-between">
         <NavbarLinks
           linksData={navLinksData.leftSide}
-          colorText={"text-white"}
+          colorText="text-white"
           flexDirection="flex-row"
           textSize="text-base"
         />
         <Link
-          to="/"
           className="flex items-center pl-2.5"
-          onClick={() => {
-            setActiveLink("");
-            window.scrollTo(0, 0);
-          }}
+          to="/"
+          onClick={handleClickOnLogo}
         >
-          <img src={logo} alt="logo" className="h-8 xl:h-10" />
+          <img className="h-8 xl:h-10" src={logo} alt="logo" />
         </Link>
         <NavbarLinks
           linksData={navLinksData.rightSide}
