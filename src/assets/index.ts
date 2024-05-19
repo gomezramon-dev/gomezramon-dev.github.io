@@ -6,12 +6,4 @@ import menuOpenHover from "./svg/menuOpenHover.svg";
 import menuClosedPressed from "./svg/menuClosedPressed.svg";
 import menuOpenPressed from "./svg/menuOpenPressed.svg";
 
-export {
-  logo,
-  menuClosed,
-  menuOpen,
-  menuClosedHover,
-  menuOpenHover,
-  menuClosedPressed,
-  menuOpenPressed,
-};
+export { logo, menuClosed, menuOpen, menuClosedHover, menuOpenHover, menuClosedPressed, menuOpenPressed };
