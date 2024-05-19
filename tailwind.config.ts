@@ -14,18 +14,28 @@ const config: Config = {
       },
       keyframes: {
         slideDown: {
-          "0%": { transform: "translateY(-100%)", visibility: "visible" },
-          "100%": { transform: "translateY(0)" },
+          "0%": {
+            transform: "translateY(-100%)"
+           },
+          "100%": { 
+            transform: "translateY(0)" 
+          },
         },
         slideUp: {
-          "0%": { transform: "translateY(0)" },
-          "100%": { transform: "translateY(-100%)", visibility: "hidden" },
+          "0%": { 
+            transform: "translateY(0)" 
+          },
+          "100%": { 
+            transform: "translateY(-100%)",
+            visibility: "hidden" 
+          },
         },
       },
       animation: {
         slideDown: "slideDown 0.5s ease forwards",
         slideUp: "slideUp 0.5s ease forwards",
         slideUpWindow: "slideUp 1s ease forwards",
+        slideDownWindow: "slideDown 0.75s ease forwards",
       },
     },
   },
