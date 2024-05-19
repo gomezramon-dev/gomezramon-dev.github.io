@@ -24,9 +24,9 @@ const MobileNavbar_Menu = () => {
     >
       <div className="col-span-6 border-white border-[6px] col-start-2 flex flex-col ">
         <div className="bg-secondary flex h-[30px] items-center justify-start gap-2 pl-4">
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
-          <span className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
+          {Array(3).fill(null).map((_, index) => (
+            <span key={index} className="inline-block h-[12px] w-[12px] rounded-full bg-white"></span>
+          ))}
         </div>
         <div className="border-secondary flex flex-col items-center justify-between border-x-[6px] border-b-[6px] bg-white py-48 text-center">
           <NavbarLinks
