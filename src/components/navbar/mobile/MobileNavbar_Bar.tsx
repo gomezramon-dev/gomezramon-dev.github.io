@@ -8,14 +8,13 @@ import { useMenuStore } from "../../../store";
 const MobileNavbar_Bar = () => {
   const { handleClickOnLogo } = useClickLogo();
   const { isLaunchedRWD, width, LARGE_MIN_WIDTH } = useResponsiveDesign();
-  const [toggleMenu, menuImg, setToggleMenu] =
-    useMenuStore(
-      useShallow((state) => [
-        state.toggleMenu,
-        state.menuImg,
-        state.setToggleMenu,
-      ]),
-    );
+  const [toggleMenu, menuImg, setToggleMenu] = useMenuStore(
+    useShallow((state) => [
+      state.toggleMenu,
+      state.menuImg,
+      state.setToggleMenu,
+    ]),
+  );
 
   return (
     <div
@@ -34,14 +33,10 @@ const MobileNavbar_Bar = () => {
         </Link>
         <div className="flex flex-1 items-center justify-end">
           <button
-            className="flex w-[42px] h-[42px] items-center justify-center border-secondary border-2 bg-white drop-shadow-[-2px_4px_#241F23] rounded-xl hover:bg-[#A7A5A7] active:bg-[#A7A5A7] active:drop-shadow-none active:mt-1 active:mr-0.5"
+            className="w-[42px] h-[42px]"
             onClick={() => setToggleMenu(!toggleMenu)}
           >
-            <img
-             className="cursor-pointer flex items-center justify-center"
-             src={menuImg}
-             alt="menu"
-            />
+            <img src={menuImg} alt="menu" />
           </button>
         </div>
       </div>

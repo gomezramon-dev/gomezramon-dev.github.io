@@ -11,7 +11,6 @@ import {
 
 /**
  * @TODO - NAVBAR
- * - Replace SVG Menu with a styled Button
  * - Add custom measurements to tailwind.config.ts
  * - Replace animation with Motion Frame
  * 

@@ -39,6 +39,29 @@
     scroll-behavior: smooth;
     color-scheme: dark;
   }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #241F23;
+    border-width: 2px;
+    background-color: white;
+    filter: drop-shadow(-2px 4px #241F23);
+    border-radius: 12px;
+  }
+
+  button:active {
+    filter: drop-shadow(0 0 #0000);
+    margin-top: 0.25rem;
+    margin-right: 0.125rem; 
+  }
+  
+  button:hover,
+  button:active {
+    background-color: #A7A5A7;
+  }
+  
 }
 
 .horizontal-padding {
