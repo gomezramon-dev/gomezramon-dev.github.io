@@ -9,6 +9,18 @@ import {
   ContactMe,
 } from "./components/";
 
+/**
+ * @TODO - NAVBAR
+ * - Replace SVG Menu with a styled Button
+ * - Add custom measurements to tailwind.config.ts
+ * - Replace animation with Motion Frame
+ * 
+ * @TODO - HEADER
+ * - Refactor code, especially WelcomeTo.tsx
+ * - Add custom measurements to tailwind.config.ts
+ * - Replace animation with Motion Frame
+ */
+
 const App = () => {
   return (
     <BrowserRouter>
