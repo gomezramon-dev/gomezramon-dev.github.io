@@ -1,30 +1,24 @@
 import { type StateCreator, create } from "zustand";
 import { persist, devtools } from "zustand/middleware";
 import { customSessionStorage } from "./storage/session.storage";
-import { menuClosed, menuClosedHover, menuClosedPressed, menuOpen, menuOpenHover, menuOpenPressed } from "../assets/";
+import { closed, open } from "../assets/";
 
 interface MenuState {
   toggleMenu: boolean;
   isLaunchedMenu: boolean;
   menuImg: string;
-  menuHoverImg: string;
-  menuPressedImg: string;
   setToggleMenu: (value: boolean) => void;
 }
 
 const storeAPI: StateCreator<MenuState> = (set) => ({
   toggleMenu: false,
   isLaunchedMenu: false,
-  menuImg: menuClosed,
-  menuHoverImg: menuClosedHover,
-  menuPressedImg: menuClosedPressed,
+  menuImg: closed,
   setToggleMenu: (value) => {
     set({
       toggleMenu: value,
       isLaunchedMenu: true,
-      menuImg: value ? menuOpen : menuClosed,
-      menuHoverImg: value ? menuOpenHover : menuClosedHover,
-      menuPressedImg: value ? menuOpenPressed : menuClosedPressed,
+      menuImg: value ? open : closed,
     });
   },
 });
