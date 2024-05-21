@@ -22,7 +22,7 @@ const MobileNavbar_Bar = () => {
 
   return (
     <div
-      className={classNames("horizontal-padding fixed z-10 flex h-20 w-full", {
+      className={classNames("horizontal-padding fixed z-40 flex h-20 w-full", {
         hidden: width > LARGE_MIN_WIDTH && !isLaunchedRWD,
         "animate-slideDown lg:animate-slideUp": isLaunchedRWD,
       })}

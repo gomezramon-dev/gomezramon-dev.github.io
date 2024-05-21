@@ -12,7 +12,7 @@ const MobileNavbar_Menu = () => {
   return (
     <div
       className={classNames(
-        "fixed h-full w-full grid-cols-8 flex-col items-center justify-center",
+        "fixed h-full z-30 w-full grid-cols-8 flex-col items-center justify-center",
         {
           "grid": toggleMenu && !isLaunchedMenu,
           "hidden": (!toggleMenu && !isLaunchedMenu) || (width > LARGE_MIN_WIDTH && !isLaunchedRWD),

@@ -12,7 +12,7 @@ const DesktopNavbar = () => {
   return (
     <nav
       className={classNames(
-        "bg-secondary horizontal-padding fixed z-20 flex h-20 w-full",
+        "bg-secondary horizontal-padding fixed z-50 flex h-20 w-full",
         {
           "hidden": width < LARGE_MIN_WIDTH && !isLaunchedRWD,
           "animate-slideUp lg:animate-slideDown": isLaunchedRWD,
