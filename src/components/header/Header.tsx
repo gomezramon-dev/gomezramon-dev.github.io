@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import WelcomeTo from "./WelcomeTo";
 import {
+  download,
   asciiWindow,
   backwardWindow,
   blackWindow,
@@ -76,6 +77,12 @@ const Header = () => {
         src={rightWorld}
         alt="rightWorld"
       />
+      <button className="w-[236px] h-[52px] translate-y-[750%]">
+        <a className="flex gap-4" href="../../assets/" download="KapidevResume.pdf">
+          Get Resume
+          <img src={download} alt="download" />
+        </a>
+      </button>
     </div>
   );
 };

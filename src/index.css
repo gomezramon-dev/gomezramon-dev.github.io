@@ -44,11 +44,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
     border-color: #241F23;
     border-width: 2px;
     background-color: white;
+    color: #241F23;
     filter: drop-shadow(-2px 4px #241F23);
     border-radius: 12px;
+    font-size: 18px;
+    line-height: 24px; 
+    letter-spacing: 3.6px;
   }
 
   button:active {
