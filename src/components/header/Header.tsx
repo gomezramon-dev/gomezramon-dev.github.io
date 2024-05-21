@@ -28,8 +28,7 @@ const Header = () => {
 
   return (
     <div
-      style={{ transform: `scale(${scale})` }}
-      className="flex h-[1000px] horizontal-padding w-full items-center justify-center relative"
+      className="flex h-[1000px]  horizontal-padding w-full items-center justify-center relative"
     >
       <WelcomeTo />
       <img
@@ -77,7 +76,7 @@ const Header = () => {
         src={rightWorld}
         alt="rightWorld"
       />
-      <button className="w-[236px] h-[52px] translate-y-[750%]">
+      <button className="w-[236px] h-[52px] translate-y-[720%]">
         <a className="flex gap-4" href="../../assets/" download="KapidevResume.pdf">
           Get Resume
           <img src={download} alt="download" />

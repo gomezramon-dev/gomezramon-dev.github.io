@@ -3,10 +3,10 @@ import {
   DesktopNavbar,
   MobileNavbar,
   Header,
-  // AboutMe,
-  // Skills,
-  // Projects,
-  // ContactMe,
+  AboutMe,
+  Skills,
+  Projects,
+  ContactMe,
 } from "./components/";
 
 /**
@@ -27,10 +27,10 @@ const App = () => {
         <DesktopNavbar />
         <MobileNavbar />
         <Header />
-        {/* <AboutMe />
+        <AboutMe />
         <Skills />
         <Projects />
-        <ContactMe /> */}
+        <ContactMe />
       </div>
     </BrowserRouter>
   );
