@@ -11,6 +11,7 @@ const config: Config = {
       },
       letterSpacing: {
         links: "4px",
+        title: "64px",
       },
       keyframes: {
         slideDown: {
