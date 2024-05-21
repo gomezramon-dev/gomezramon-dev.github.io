@@ -28,6 +28,7 @@ const Header = () => {
 
   return (
     <div
+      style={{ transform: `scale(${scale})` }}
       className="flex h-[1000px]  horizontal-padding w-full items-center justify-center relative"
     >
       <WelcomeTo />
