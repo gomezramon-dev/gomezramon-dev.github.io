@@ -1,7 +1,7 @@
 const Projects = () => {
   return (
-    <div className="flex h-[1000px] items-center justify-center bg-red-400">
-      <h1 className="text-9xl">projects</h1>
+    <div className="flex h-[920px] items-center justify-center bg-white">
+      <h1 className="text-8xl text-secondary">projects</h1>
     </div>
   );
 };

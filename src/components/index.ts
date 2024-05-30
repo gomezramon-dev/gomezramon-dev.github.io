@@ -6,9 +6,11 @@ import NavbarLinks from "./navbar/NavbarLinks";
 import Header from "./header/Header";
 import WelcomeTo from "./header/WelcomeTo";
 import AboutMe from "./AboutMe";
-import Skills from "./Skills";
+import Skills from "./skills/Skills";
+import SkillCategory from "./skills/SkillCategory";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
+
 
 export {
   DesktopNavbar,
@@ -20,6 +22,7 @@ export {
   WelcomeTo,
   AboutMe,
   Skills,
+  SkillCategory,
   Projects,
   ContactMe,
 };
