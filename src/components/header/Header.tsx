@@ -78,7 +78,7 @@ const Header = () => {
         alt="rightWorld"
       />
       <button className="w-[236px] h-[52px] translate-y-[720%]">
-        <a className="flex gap-4" href="../../assets/" download="KapidevResume.pdf">
+        <a className="flex gap-4" href="../../../" download="KapidevResume.pdf">
           Get Resume
           <img src={download} alt="download" />
         </a>
