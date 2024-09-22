@@ -8,6 +8,7 @@ const config: Config = {
       colors: {
         primary: "#FDBD02",
         secondary: "#241F23",
+        hover: "#A7A5A7",
       },
       letterSpacing: {
         links: "4px",

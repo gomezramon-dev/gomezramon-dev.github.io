@@ -78,7 +78,7 @@ const Header = () => {
         src={rightWorld}
         alt="rightWorld"
       />
-      <a className="flex gap-4 no-underline" target="_blank" rel="noopener noreferrer" href={cv} download="KapidevResume.pdf">
+      <a className="flex gap-4 no-underline hover:text-hover" target="_blank" rel="noopener noreferrer" href={cv} download="KapidevResume.pdf">
         <button className="w-[236px] h-[52px] translate-y-[720%]">
           Get Resume
           <img src={download} alt="download" />
