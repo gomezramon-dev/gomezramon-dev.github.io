@@ -11,6 +11,7 @@ import {
   rightWorld,
   smallBackwardWindow,
 } from "../../assets";
+import cv from "../../../public/KapidevResume.pdf"
 
 const Header = () => {
   const [scale, setScale] = useState(1);
@@ -77,12 +78,12 @@ const Header = () => {
         src={rightWorld}
         alt="rightWorld"
       />
-      <button className="w-[236px] h-[52px] translate-y-[720%]">
-        <a className="flex gap-4" href="../../../" download="KapidevResume.pdf">
+      <a className="flex gap-4 no-underline" target="_blank" rel="noopener noreferrer" href={cv} download="KapidevResume.pdf">
+        <button className="w-[236px] h-[52px] translate-y-[720%]">
           Get Resume
           <img src={download} alt="download" />
-        </a>
-      </button>
+        </button>
+      </a>
     </div>
   );
 };
