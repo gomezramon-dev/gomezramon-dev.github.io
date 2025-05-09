@@ -12,12 +12,8 @@ import {
   smallBackwardWindow,
 } from "../../assets";
 import cv from "../../../public/KapidevResume.pdf";
-import useScale from "../../hooks/useScale";
 
 const Header = () => {
-  // Header with dynamic scaling: initial size smaller, shrinks proportionally
-  const scale = useScale();
-  const headerScale = Math.min(scale, 1) * 0.8;
   // Programmatic download for resume to utilize base button styles
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -31,11 +27,8 @@ const Header = () => {
   // Header container: static size, images and SVG static size
   return (
     <div className="relative horizontal-margin flex items-center justify-center z-[19] min-h-screen">
-      {/* Scaled SVG path only */}
-      <div
-        className="transform origin-top"
-        style={{ transform: `scale(${headerScale})` }}
-      >
+      {/* SVG fijo sin escalado */}
+      <div className="hidden lg:inline">
         <WelcomeTo />
       </div>
       <img
@@ -86,7 +79,7 @@ const Header = () => {
       <button
         type="button"
         onClick={handleDownload}
-        className="w-[300px] md:w-[300px] h-[52px]"
+        className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-[300px] md:w-[300px] h-[52px]"
       >
           Get Resume
           <img
