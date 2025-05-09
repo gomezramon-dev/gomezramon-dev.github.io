@@ -1,6 +1,6 @@
 const ContactMe = () => {
   return (
-    <div className="flex flex-col h-[920px] items-center justify-center gap-16" id="contactme">
+    <div className="flex flex-col min-h-screen items-center justify-center gap-16" id="contactme">
       <h1 className="text-5xl">contact-me</h1>
       <div className="flex gap-16">
         <a className="flex gap-4 no-underline hover:text-hover" target="_blank" rel="noopener noreferrer" href="https://github.com/gomezramon-dev">

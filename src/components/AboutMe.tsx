@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div className="flex flex-col h-[920px] horizontal-padding items-center justify-evenly bg-secondary" id="aboutme">
+    <div className="flex flex-col min-h-screen horizontal-padding items-center justify-evenly bg-secondary" id="aboutme">
       <h1 className="text-5xl">about-me</h1>
       <code className="text-3xl text-center text-white leading-normal">
         console.log(

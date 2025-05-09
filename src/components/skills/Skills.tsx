@@ -24,7 +24,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="flex flex-col h-[920px] horizontal-padding items-center justify-evenly" id="skills">
+    <div className="flex flex-col min-h-screen horizontal-padding items-center justify-evenly" id="skills">
       <h1 className="text-5xl text-secondary">skills</h1>
       <code className="text-3xl leading-normal text-secondary">
         const techSkills = &#123;
