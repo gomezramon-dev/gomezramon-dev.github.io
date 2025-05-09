@@ -1,32 +1,26 @@
 import SkillCategory from "./SkillCategory";
 
 type TechSkills = {
-  frontEnd: string[];
-  backEnd: string[];
+  webDevelopment: string[];
+  mobileDevelopment: string[];
   cloudComputing: string[];
+  devOps: string[];
   databases: string[];
-  lowLevelProgramming: string[];
-  dataScience: string[];
-  ai: string[];
-  lowCodeTools: string[];
 };
 
 const Skills = () => {
   const techSkills: TechSkills = {
-    frontEnd: ["JavaScript", "TypeScript", "React", "Next.js", "Bootstrap", "Tailwind"],
-    backEnd: ["Node.js", "Express", "Flask", "Nest.js", "Java"],
-    cloudComputing: ["GCP", "Firebase", "Netlify"],
-    databases: ["NoSQL", "MongoDB", "InfluxDB", "PostgreSQL"],
-    lowLevelProgramming: ["C", "C++", "GCC", "Rust"],
-    dataScience: ["Python", "Pandas", "Numpy", "Matplotlib", "R"],
-    ai: ["TensorFlow", "PyTorch"],
-    lowCodeTools: ["Github", "Postman", "Figma", "Slack", "Trello", "Jira", "Grafana"]
+    webDevelopment: ["React", "TypeScript", "Node", "Springboot", "Express.js", "Django", "Flask", "FastAPI"],
+    mobileDevelopment: ["React Native", "Firebase", "Flask", "Nest.js", "Java"],
+    cloudComputing: ["AWS", "GCP", "Azure"],
+    devOps: ["GitHub Actions", "Docker"],
+    databases: ["MongoDB", "SQL Server", "PostgreSQL"],
   };
 
   return (
-    <div className="flex flex-col min-h-screen horizontal-padding items-center justify-evenly" id="skills">
+    <div className="flex flex-col min-h-screen horizontal-margin items-center justify-center gap-10" id="skills">
       <h1 className="text-5xl text-secondary">skills</h1>
-      <code className="text-3xl leading-normal text-secondary">
+      <code className="w-full text-xl md:text-2xl lg:text-3xl leading-normal text-secondary whitespace-normal break-words">
         const techSkills = &#123;
         <br />
         {Object.keys(techSkills).map((category) => (

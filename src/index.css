@@ -90,3 +90,26 @@
     @apply px-56;
   }
 }
+
+/* Horizontal margin for consistent section widths matching navbar padding */
+.horizontal-margin {
+  @apply mx-12;
+}
+
+@media (min-width: 640px) {
+  .horizontal-margin {
+    @apply mx-20;
+  }
+}
+
+@media (min-width: 1280px) {
+  .horizontal-margin {
+    @apply mx-32;
+  }
+}
+
+@media (min-width: 1536px) {
+  .horizontal-margin {
+    @apply mx-56;
+  }
+}
