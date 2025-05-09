@@ -1,85 +1,33 @@
-import { useEffect, useState } from "react";
-import WelcomeTo from "./WelcomeTo";
-import {
-  download,
-  asciiWindow,
-  backwardWindow,
-  blackWindow,
-  leftWorld,
-  mainWindow,
-  mouse,
-  rightWorld,
-  smallBackwardWindow,
-} from "../../assets";
-import cv from "../../../public/KapidevResume.pdf"
+/* eslint-disable react-refresh/only-export-components */
+import React, { useMemo } from 'react';
+import WelcomeTo from './WelcomeTo';
+import HeaderVisuals from './HeaderVisuals';
+import useScale from '../../hooks/useScale';
+import { download } from '../../assets';
+import cv from '../../../public/KapidevResume.pdf';
 
-const Header = () => {
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScale(window.innerWidth / 1920);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+const Header: React.FC = () => {
+  const scale = useScale(1920);
+  const style = useMemo(
+    () => ({ transform: `scale(${scale})` }),
+    [scale],
+  );
 
   return (
     <div
-      style={{ transform: `scale(${scale})` }}
-      className="flex h-[1000px]  horizontal-padding w-full items-center justify-center relative"
+      style={style}
+      className="flex min-h-screen horizontal-padding w-full items-center justify-center relative"
     >
       <WelcomeTo />
-      <img
-        className="absolute z-30 mx-auto my-auto"
-        src={mainWindow}
-        alt="mainWindow"
-      />
-      <img
-        className="absolute z-[29] mx-auto my-auto translate-y-[-575%] translate-x-[1050%]"
-        src={mouse}
-        alt="mainWindow"
-      />
-      <img
-        className="absolute z-[29] mx-auto my-auto translate-y-[32%] translate-x-[-32.25%]"
-        src={blackWindow}
-        alt="blackWindow"
-      />
-      <img
-        className="absolute z-[28] mx-auto my-auto translate-y-[-21%] translate-x-[-7%]"
-        src={backwardWindow}
-        alt="backwardWindow"
-      />
-      <img
-        className="absolute z-[29] mx-auto my-auto translate-y-[10%] translate-x-[130%]"
-        src={asciiWindow}
-        alt="asciiWindow"
-      />
-      <img
-        className="absolute z-[28] mx-auto my-auto translate-y-[18%] translate-x-[122.5%]"
-        src={smallBackwardWindow}
-        alt="smallBackwardWindow"
-      />
-      <img
-        className="absolute z-[27] mx-auto my-auto translate-y-[28%] translate-x-[115%]"
-        src={smallBackwardWindow}
-        alt="smallBackwardWindow"
-      />
-      <img
-        className="absolute z-[26] mx-auto my-auto translate-y-[-17%] translate-x-[-85%]"
-        src={leftWorld}
-        alt="leftWorld"
-      />
-      <img
-        className="absolute z-[26] mx-auto my-auto translate-y-[15%] translate-x-[115%]"
-        src={rightWorld}
-        alt="rightWorld"
-      />
-      <a className="flex gap-4 no-underline hover:text-hover" target="_blank" rel="noopener noreferrer" href={cv} download="KapidevResume.pdf">
-        <button className="w-[236px] h-[52px] translate-y-[720%]">
+      <HeaderVisuals />
+      <a
+        className="flex gap-4 no-underline hover:text-hover"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={cv}
+        download="KapidevResume.pdf"
+      >
+        <button className="w-[236px] h-[52px] translate-y-[720%] flex items-center justify-center gap-4 border-2 border-secondary bg-white text-secondary filter drop-shadow(-2px 4px #241F23) rounded-lg text-lg tracking-links hover:bg-hover">
           Get Resume
           <img src={download} alt="download" />
         </button>
@@ -88,4 +36,5 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
+
