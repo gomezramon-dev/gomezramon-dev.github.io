@@ -9,9 +9,17 @@ interface Props {
   colorText: string;
   flexDirection: string;
   textSize: string;
+  /** Optional callback when a link is clicked */
+  onLinkClick?: () => void;
 }
 
-const NavbarLinks = ({ linksData, colorText, flexDirection, textSize }: Props) => {
+const NavbarLinks = ({
+  linksData,
+  colorText,
+  flexDirection,
+  textSize,
+  onLinkClick,
+}: Props) => {
   const activeLink = useLinkStore((state) => state.activeLink);
   const setActiveLink = useLinkStore((state) => state.setActiveLink);
 
@@ -24,9 +32,12 @@ const NavbarLinks = ({ linksData, colorText, flexDirection, textSize }: Props) =
             [colorText]: activeLink !== title,
             "text-primary": activeLink === title,
           })}
-          onClick={() => setActiveLink(title)}
+          onClick={() => {
+            setActiveLink(title);
+            onLinkClick?.();
+          }}
         >
-          <a className={classNames("tracking-links", textSize)} href={`#${id}`}> {title} </a>
+          <a className={classNames("tracking-links", textSize)} href={`#${id}`}>{title}</a>
         </li>
       ))}
     </ul>

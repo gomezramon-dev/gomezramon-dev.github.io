@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Precompute SVG path and dimensions to avoid recalculations on re-renders
-const SCALE = 1.25;
+const SCALE = 0.75;
 const BASE_WIDTH = 1134;
 const BASE_HEIGHT = 557;
 const NEW_WIDTH = Math.round(BASE_WIDTH * SCALE);
@@ -89,7 +89,8 @@ Z`;
  */
 const WelcomeTo: React.FC = () => (
   <svg
-    className="absolute z-30 mx-auto my-auto"
+    className="absolute inset-0 mx-auto my-auto z-40 overflow-visible"
+    style={{ overflow: 'visible' }}
     width={NEW_WIDTH}
     height={NEW_HEIGHT}
     viewBox={`0 0 ${NEW_WIDTH} ${NEW_HEIGHT}`}

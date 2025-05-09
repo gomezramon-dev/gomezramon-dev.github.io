@@ -8,11 +8,12 @@ const MobileNavbar_Menu = () => {
   const { isLaunchedRWD,  width, LARGE_MIN_WIDTH } = useResponsiveDesign();
   const toggleMenu = useMenuStore((state) => state.toggleMenu);
   const isLaunchedMenu = useMenuStore((state) => state.isLaunchedMenu);
+  const setToggleMenu = useMenuStore((state) => state.setToggleMenu);
 
   return (
     <div
       className={classNames(
-        "fixed h-full z-30 w-full grid-cols-8 flex-col items-center justify-center",
+        "fixed h-full z-50 w-full grid-cols-8 flex-col items-center justify-center",
         {
           "grid": toggleMenu && !isLaunchedMenu,
           "hidden": (!toggleMenu && !isLaunchedMenu) || (width > LARGE_MIN_WIDTH && !isLaunchedRWD),
@@ -29,12 +30,13 @@ const MobileNavbar_Menu = () => {
           ))}
         </div>
         <div className="border-secondary flex flex-col items-center justify-between border-x-[6px] border-b-[6px] bg-white py-48 text-center">
-          <NavbarLinks
-            linksData={[...navLinksData.leftSide, ...navLinksData.rightSide]}
-            colorText="text-black"
-            flexDirection="flex-col"
-            textSize="text-2xl"
-          />
+        <NavbarLinks
+          linksData={[...navLinksData.leftSide, ...navLinksData.rightSide]}
+          colorText="text-black"
+          flexDirection="flex-col"
+          textSize="text-2xl"
+          onLinkClick={() => setToggleMenu(false)}
+        />
         </div>
       </div>
     </div>
