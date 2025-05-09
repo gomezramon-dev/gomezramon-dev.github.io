@@ -89,7 +89,7 @@ Z`;
  */
 const WelcomeTo: React.FC = () => (
   <svg
-    className="absolute inset-0 mx-auto my-auto z-40 overflow-visible"
+    className="absolute inset-0 mx-auto my-auto z-20 overflow-visible"
     style={{ overflow: 'visible' }}
     width={NEW_WIDTH}
     height={NEW_HEIGHT}
