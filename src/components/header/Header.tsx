@@ -19,7 +19,7 @@ const Header = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = cv;
-    link.download = 'KapidevResume.pdf';
+    link.download = 'RamonGomezUrquidezResume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -10,6 +10,7 @@ import Skills from "./skills/Skills";
 import SkillCategory from "./skills/SkillCategory";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
+import Certifications from "./Certifications";
 
 
 export {
@@ -25,4 +26,5 @@ export {
   SkillCategory,
   Projects,
   ContactMe,
+  Certifications,
 };
