@@ -30,7 +30,11 @@ const Skills = () => {
         const techSkills = &#123;
         <br />
         {Object.keys(techSkills).map((category) => (
-          <SkillCategory category={category} skills={techSkills[category as keyof TechSkills]} />
+          <SkillCategory
+            key={category}
+            category={category}
+            skills={techSkills[category as keyof TechSkills]}
+          />
         ))}
         &#125;
       </code>

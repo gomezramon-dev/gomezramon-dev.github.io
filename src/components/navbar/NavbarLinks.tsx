@@ -16,19 +16,17 @@ const NavbarLinks = ({ linksData, colorText, flexDirection, textSize }: Props) =
   const setActiveLink = useLinkStore((state) => state.setActiveLink);
 
   return (
-    <ul className={`flex list-none gap-10 xl:gap-12 2xl:gap-16 ${flexDirection}`}>
-      {linksData.map((link) => (
+    <ul className={classNames("flex list-none gap-10 xl:gap-12 2xl:gap-16", flexDirection)}>
+      {linksData.map(({ id, title }) => (
         <li
-          className={classNames("hover:text-primary cursor pointer", {
-            [colorText]: activeLink !== link.title,
-            "text-primary": activeLink === link.title,
+          key={id}
+          className={classNames("cursor-pointer hover:text-primary", {
+            [colorText]: activeLink !== title,
+            "text-primary": activeLink === title,
           })}
-          key={link.id}
-          onClick={() => setActiveLink(link.title)}
+          onClick={() => setActiveLink(title)}
         >
-          <a className={`tracking-links ${textSize}`} href={`#${link.id}`}>
-            {link.title}
-          </a>
+          <a className={classNames("tracking-links", textSize)} href={`#${id}`}> {title} </a>
         </li>
       ))}
     </ul>
