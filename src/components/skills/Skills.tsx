@@ -19,7 +19,7 @@ const Skills = () => {
 
   return (
     <div className="flex flex-col min-h-screen horizontal-margin items-center justify-center gap-10" id="skills">
-      <h1 className="text-5xl text-secondary">skills</h1>
+      <h1 className="text-4xl md:text-5xl text-secondary">skills</h1>
       <code className="w-full text-xl md:text-2xl lg:text-3xl leading-normal text-secondary whitespace-normal break-words">
         const techSkills = &#123;
         <br />
